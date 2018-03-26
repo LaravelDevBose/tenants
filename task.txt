@@ -1,0 +1,36 @@
+Now, for tenants details:
+Full names
+ID Number
+Phone Number
+Plot Name/Number
+House Name/Number
+Room Type(ie. single room, double, one bedroom)
+Rent Amount
+Amount Paid
+Balance
+
+
+Task List
+ 1. Dashboard with Reports //view
+ 2. all Tenants View in Table //view
+ 3. Create Tenants view //view
+ 3. make Form and make validation
+ 4. Store All Information in Tenants table  //view
+ 5. Make A View Like Create Tenants page //view
+ 6. Make Edit Page Validate And Editable //view
+ 7. Update All Data of Tenants
+ 8. View A Single tenant Information With Payment History //view
+ 9. Make Delete-able All Tenant Information
+
+ 10. Make A Payment Details Page //view
+ 11. Integrate Payable option
+ 12. Store Payment Information History
+ 13. Calculate Balance And Payable Amount
+
+ 14. Make A view of all Expanse in table
+ 15. make Search able by form Date - to Date
+ 16. Show Search Result
+ 17. print in Excel Report
+
+ 18. View A Report Page by Date to date and Also a single Tenant payment History
+ 19. View it in a excel or pdf or both option

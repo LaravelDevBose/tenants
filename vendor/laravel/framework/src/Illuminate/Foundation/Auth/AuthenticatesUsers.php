@@ -59,10 +59,22 @@ trait AuthenticatesUsers
      */
     protected function validateLogin(Request $request)
     {
-        $this->validate($request, [
-            $this->username() => 'required|string',
-            'password' => 'required|string',
-        ]);
+//        $this->validate($request, [
+//            $this->username() => 'required|string',
+//            'password' => 'required|string',
+//        ]);
+
+        $this->validate(
+            $request,
+            [
+                'identity' => 'required|string',
+                'password' => 'required|string',
+            ],
+            [
+                'identity.required' => 'Username or email is required',
+                'password.required' => 'Password is required',
+            ]
+        );
     }
 
     /**
@@ -127,9 +139,16 @@ trait AuthenticatesUsers
      */
     protected function sendFailedLoginResponse(Request $request)
     {
-        throw ValidationException::withMessages([
-            $this->username() => [trans('auth.failed')],
-        ]);
+//        throw ValidationException::withMessages([
+//            $this->username() => [trans('auth.failed')],
+//        ]);
+
+        $request->session()->put('login_error', trans('auth.failed'));
+        throw ValidationException::withMessages(
+            [
+                'error' => [trans('auth.failed')],
+            ]
+        );
     }
 
     /**
@@ -139,7 +158,10 @@ trait AuthenticatesUsers
      */
     public function username()
     {
-        return 'email';
+        $identity  = request()->get('identity');
+        $fieldName = filter_var($identity, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+        request()->merge([$fieldName => $identity]);
+        return $fieldName;
     }
 
     /**
