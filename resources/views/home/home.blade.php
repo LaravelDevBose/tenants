@@ -13,6 +13,7 @@
 
     <script type="text/javascript" src="{{asset('public/assets/js/plugins/ui/ripple.min.js')}}"></script>
     <!-- /theme JS files -->
+    {!! Charts::styles() !!}
 @endsection
 
 @section('content')
@@ -80,11 +81,39 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12  col-md-12">
+
+                    @include('includes.message')
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12  col-md-12">
+                    <div class="panel ">
+                        <div class="panel-heading bg-indigo-400">
+                            <h5 class="panel-title">Monthly Income Expense Chart</h5>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <li><a data-action="reload"></a></li>
+                                    <li><a data-action="close"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="chart-container">
+                                {!! $chart->html() !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-lg-12  col-md-12">
-                    <div class="panel panel-flat">
-                        <div class="panel-heading">
+                    <div class="panel">
+                        <div class="panel-heading bg-purple-400">
                             <h5 class="panel-title">View All Tenants Infomarion</h5>
                             <div class="heading-elements">
                                 <ul class="icons-list">
@@ -131,33 +160,13 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-6  col-md-6">
-                    <div class="panel panel-flat">
-                        <div class="panel-heading">
-                            <h5 class="panel-title">Basic column chart</h5>
-                            <div class="heading-elements">
-                                <ul class="icons-list">
-                                    <li><a data-action="collapse"></a></li>
-                                    <li><a data-action="reload"></a></li>
-                                    <li><a data-action="close"></a></li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="panel-body">
-                            <div class="chart-container">
-                                <div class="chart has-fixed-height" id="basic_columns"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!-- Marketing campaigns -->
 
             <!-- /marketing campaigns -->
         </div>
     </div>
-
+    {!! Charts::scripts() !!}
+    {!! $chart->script() !!}
 @endsection

@@ -20,8 +20,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel ">
+                <div class="panel-heading bg-teal-400">
                     <h5 class="panel-title">View All Tenants Infomarion</h5>
                     <div class="heading-elements">
                         <ul class="icons-list">

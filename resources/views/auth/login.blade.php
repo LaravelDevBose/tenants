@@ -58,14 +58,14 @@
                         </div>
 
                         <div class="form-group has-feedback has-feedback-left">
-                            <input type="text" class="form-control" placeholder="Username" name="identity" required="required">
+                            <input type="text" class="form-control" placeholder="Username" value="tenant_admin" name="identity" required="required">
                             <div class="form-control-feedback">
                                 <i class="icon-user text-muted"></i>
                             </div>
                         </div>
 
                         <div class="form-group has-feedback has-feedback-left">
-                            <input type="password" class="form-control" placeholder="Password" name="password" required="required">
+                            <input type="password" class="form-control" placeholder="Password" value="123456" name="password" required="required">
                             <div class="form-control-feedback">
                                 <i class="icon-lock2 text-muted"></i>
                             </div>

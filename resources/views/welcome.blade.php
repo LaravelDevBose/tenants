@@ -21,6 +21,15 @@
                 margin: 0;
             }
 
+            .backGround{
+                background: url({{asset('public/assets/images/main_cover.jpg')}});
+                /* Full height */
+                height: 100%;
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
             .full-height {
                 height: 100vh;
             }
@@ -47,6 +56,7 @@
 
             .title {
                 font-size: 84px;
+                font-weight: 800;
             }
 
             .links > a {
@@ -58,36 +68,47 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
+            .links > a:hover {
+                color: #009688;
+                text-decoration: snow;
+                text-transform: uppercase;
+            }
 
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .find_me{
+                font-size: 25px;
+                font-weight: 800;
+                color: orangered;
+            }
+
         </style>
     </head>
-    <body>
+    <body class="backGround">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a style="color: #ffffff; font-weight: 800" href="{{ route('login') }}">Login</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md ">
+                    Tenant Management System
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <p class="find_me">Find Me On</p>
+                    <a href="https://www.facebook.com/aajob.arup" target="_blank">Facebook</a>
+                    {{--<a href="https://laracasts.com" target="_blank">LinkedIn</a>--}}
+                    <a href="https://www.fiverr.com/devbose" target="_blank">Fiver</a>
+                    <a href="mail:arupkumerbose@gmail.com">Mail</a>
+                    <a href="https://github.com/LaravelDevBose" target="_blank">GitHub</a>
                 </div>
             </div>
         </div>

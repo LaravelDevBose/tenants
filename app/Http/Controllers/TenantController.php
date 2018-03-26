@@ -219,6 +219,7 @@ class TenantController extends Controller
         return response()->json($data);
     }
 
+
     //Resize and Uplode Shop Banner Image
     private function imageUplodeAndResize($imageInfo)
     {

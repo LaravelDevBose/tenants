@@ -278,38 +278,38 @@ $(function(){
     
     $('#search').on('click', function (e) {
 
-        console.log(e);
+        // console.log(e);
         $(this).html('Search <i class="icon-spinner2 spinner"></i>');
-        var date_from = $('input[name="date_from"]').val();
-        var date_to = $('input[name="date_to"]').val();
-
-        $.ajax({
-            url:' ',
-            type:'GET',
-            dataType:'html',
-            data:'data_from='+date_from+'&data_to='+date_to,
-            success:function(response){
-                console.log(response);
-                $('tbody').empty();
-                $('tbody').html(response);
-                swal({
-                    title: "Deleted!",
-                    text: "Expense Information has been deleted.",
-                    confirmButtonColor: "#66BB6A",
-                    type: "success"
-                });
-
-            },
-            error:function(response){
-                console.log(response);
-                swal({
-                    title: "Error",
-                    text: "Searching is Not Completed. Try Again :(",
-                    confirmButtonColor: "#2196F3",
-                    type: "error"
-                });
-            }
-        });
-        $(this).html('Search');
+        // var date_from = $('input[name="date_from"]').val();
+        // var date_to = $('input[name="date_to"]').val();
+        //
+        // $.ajax({
+        //     url:' ',
+        //     type:'GET',
+        //     dataType:'html',
+        //     data:{'data_from':date_from,'data_to':date_to},
+        //     success:function(response){
+        //         console.log(response);
+        //         $('tbody').empty();
+        //         $('tbody').html(response);
+        //         swal({
+        //             title: "Deleted!",
+        //             text: "Expense Information has been deleted.",
+        //             confirmButtonColor: "#66BB6A",
+        //             type: "success"
+        //         });
+        //
+        //     },
+        //     error:function(response){
+        //         console.log(response);
+        //         swal({
+        //             title: "Error",
+        //             text: "Searching is Not Completed. Try Again :(",
+        //             confirmButtonColor: "#2196F3",
+        //             type: "error"
+        //         });
+        //     }
+        // });
+        // $(this).html('Search');
     });
 })

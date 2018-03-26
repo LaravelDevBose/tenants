@@ -17,15 +17,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>['auth:web']], function(){
+    Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::prefix('account')->group(function(){
+        Route::get('setting','Auth\AccountSettingController@index')->name('account.index');
+        Route::post('image/change','Auth\AccountSettingController@imageChnage')->name('image.change');
+        Route::post('password/change','Auth\AccountSettingController@passwordChange')->name('password.change');
+    });
     Route::resource('tenants', 'TenantController');
     Route::get('tenants/delete/{id}','TenantController@destroy');
 
     Route::resource('expenses', 'ExpenseController');
-    Route::get('expenses/delete/{id}','ExpenseController@destroy');
-    Route::get('expenses/search-{from}-{to}','ExpenseController@expenseSearch');
+    Route::get('expenses/delete/{id}','ExpenseController@destroy')->name('expenses.delete');
+    Route::post('expenses/search','ExpenseController@expenseSearch')->name('expenses.search');
 
     Route::prefix('payments')->group(function(){
         Route::get('/','PaymentController@index')->name('payments.index');
@@ -39,8 +45,14 @@ Route::group(['middleware'=>['auth:web']], function(){
     });
 
     Route::prefix('report')->group(function (){
-
         Route::get('/', 'ReportController@index')->name('report.index');
         Route::post('/download', 'ReportController@download_report')->name('report.download');
     });
+    Route::prefix('rating')->group(function (){
+        Route::post('/store','HomeController@ratingStore')->name('rating.store');
+        Route::get('view','HomeController@ratingView')->name('rating.view');
+        Route::get('show/{id}','HomeController@ratingShow')->name('rating.show');
+    });
+
 });
+

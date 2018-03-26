@@ -12,11 +12,14 @@
     <div class="navbar-collapse collapse" id="navbar-mobile">
         <ul class="nav navbar-nav">
             <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
-            <li>
+            @if(Route::currentRouteName() == 'tenants.show')
+                <li>
                 <a class="sidebar-control sidebar-detached-hide hidden-xs">
                     <i class="icon-drag-left"></i>
                 </a>
-            </li>
+                </li>
+            @endif
+            <li><button data-target="#user_rating_model" data-toggle="modal" class="btn btn-sm btn-info sidebar-control" style="margin-top: 10px"> Rating My Work </button></li>
         </ul>
 
         <div class="navbar-right">

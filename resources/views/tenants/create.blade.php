@@ -24,8 +24,8 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class="panel panel-white">
-                <div class="panel-heading">
+            <div class="panel ">
+                <div class="panel-heading bg-success-400">
                     <h6 class="panel-title">Create Tenant Form</h6>
                     <div class="heading-elements">
 

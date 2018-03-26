@@ -17,33 +17,8 @@ class ExpenseController extends Controller
      */
     public function index(Request $request)
     {
-
-        if($request->ajax()){
-            if( strpos( $request->date_from, '/' ) !== false ) {
-                //make date as a date time format
-                $date_array = explode('/', $request->date_from);
-                $date_from = $date_array[2].'-'.$date_array[0].'-'.$date_array[1].' 00:00:00';
-            }else{
-                $date_from = $request->date_form;
-            }
-
-            if( strpos( $request->date_to, '/' ) !== false ) {
-                //make date as a date time format
-                $date_array = explode('/', $request->date_to);
-                $date_to = $date_array[2].'-'.$date_array[0].'-'.$date_array[1].' 00:00:00';
-            }else{
-                $date_to = $request->date_to;
-            }
-
-
-            $expenses = Expense::whereDate('date','<',$date_from)->get();
-            return view('expenses.expenseSearch',['expenses'=>$expenses]);
-        }else{
             $expenses = Expense::orderBy('id','desc')->get();
             return view('expenses.expenses',['expenses'=>$expenses]);
-        }
-
-
     }
 
     /**
@@ -221,8 +196,27 @@ class ExpenseController extends Controller
         return;
     }
 
-    public function expenseSearch($from, $to){
+    public function expenseSearch(Request $request){
 
+        if( strpos( $request->date_from, '/' ) !== false ) {
+            //make date as a date time format
+            $date_array = explode('/', $request->date_from);
+            $date_from = $date_array[2].'-'.$date_array[0].'-'.$date_array[1].' 00:00:00';
+        }else{
+            $date_from = $request->date_form;
+        }
+
+        if( strpos( $request->date_to, '/' ) !== false ) {
+            //make date as a date time format
+            $date_array = explode('/', $request->date_to);
+            $date_to = $date_array[2].'-'.$date_array[0].'-'.$date_array[1].' 00:00:00';
+        }else{
+            $date_to = $request->date_to;
+        }
+
+
+        $expenses = Expense::whereDate('date','>=',$date_from)->whereDate('date','<=',$date_to)->get();
+        return view('expenses.expenses',['expenses'=>$expenses]);
 
     }
 }

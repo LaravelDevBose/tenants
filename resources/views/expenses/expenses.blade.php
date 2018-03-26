@@ -22,10 +22,10 @@
     <div class="row">
         <div class="col-lg-12">
             <!-- Highlighting rows and columns -->
-            <div class="panel panel-flat">
-                <div class="panel-heading">
+            <div class="panel ">
+                <div class="panel-heading bg-teal-400">
                     <h5 class="panel-title">Expenses Information</h5>
-                    <hr>
+
                 </div>
 
                 <div class="panel-body">
@@ -34,20 +34,22 @@
                     <div class="row">
                         <div class="col-md-10">
                             <div class="content-group-lg" >
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <h6 class="text text-semibold text-info">Search By Date :</h6>
+                                <form action="{{ route('expenses.search') }}" method="POST">{{ csrf_field() }}
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <h6 class="text text-semibold text-info">Search By Date :</h6>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" name="date_from" class="form-control datepicker"  placeholder="Date from:">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" name="date_to" class="form-control datepicker"  placeholder="Date to:">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="submit" id="search" class="btn btn-sm btn-success btn-block"> Search</button>
+                                        </div>
                                     </div>
-                                    <div class="col-md-3">
-                                        <input type="text" name="date_from" class="form-control datepicker"  placeholder="Date from:">
-                                    </div>
-                                    <div class="col-md-3">
-                                        <input type="text" name="date_to" class="form-control datepicker"  placeholder="Date to:">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button type="button" id="search" class="btn btn-sm btn-success btn-block"> Search</button>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                         <div class="col-md-2 ">

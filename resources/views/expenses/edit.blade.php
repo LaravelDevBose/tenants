@@ -23,8 +23,8 @@
         <div class="col-lg-12">
             <!-- Expanses insert Form-->
             <div class="col-md-8 ">
-                <div class="panel panel-flat">
-                    <div class="panel-heading">
+                <div class="panel">
+                    <div class="panel-heading bg-info-400">
                         <h5 class="panel-title">Expense Insert Form</h5>
                         <div class="heading-elements">
                             <ul class="icons-list">
@@ -101,8 +101,8 @@
             <!-- /Expanses  insert Form -->
             <!-- Expanses Type insert Form -->
             <div class="col-md-4">
-                <div class="panel panel-flat">
-                    <div class="panel-heading">
+                <div class="panel ">
+                    <div class="panel-heading bg-blue-300">
                         <h5 class="panel-title">Expense Type Insert</h5>
 
                     </div>
