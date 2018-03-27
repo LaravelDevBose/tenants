@@ -1,5 +1,5 @@
-# tenants
-this is simple Tenant management System
+# Tenant Management System
+This is simple Tenant management System
 only one Admin And sub admin can use this project 
 
 #Features:
