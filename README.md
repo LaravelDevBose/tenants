@@ -1,4 +1,4 @@
-# tenants
+# Tenant Managment System
 this is simple Tenant management System
 only one Admin And sub admin can use this project 
 
