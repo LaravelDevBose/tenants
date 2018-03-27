@@ -12,3 +12,6 @@ This is simple Tenant management System only one Admin And sub admin can use thi
 5.  Add Edit Delete And Search Expenses
 6.  Bar Chart For Income And Expense By Monthly
 7.  Beautiful Template With Full Responsive    
+
+http://asolnokol.com/tenants - automatic!
+[DEMO](http://asolnokol.com/tenants)
