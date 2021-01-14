@@ -19,7 +19,7 @@
                 </a>
                 </li>
             @endif
-            <li><button data-target="#user_rating_model" data-toggle="modal" class="btn btn-sm btn-info sidebar-control" style="margin-top: 10px"> Rating My Work </button></li>
+            
         </ul>
 
         <div class="navbar-right">

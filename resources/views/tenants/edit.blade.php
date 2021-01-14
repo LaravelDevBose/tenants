@@ -4,19 +4,19 @@
 
 @section('assets')
     <!-- Theme JS files -->
-    <script type="text/javascript" src="{{asset('public/assets/js/core/libraries/jquery_ui/core.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/wizards/form_wizard/form.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/wizards/form_wizard/form_wizard.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/selects/select2.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/core/libraries/jasny_bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/validation/validate.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/extensions/cookie.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/libraries/jquery_ui/core.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/wizards/form_wizard/form.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/wizards/form_wizard/form_wizard.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/libraries/jasny_bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/validation/validate.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/extensions/cookie.js')}}"></script>
 
-    <script type="text/javascript" src="{{asset('public/assets/js/core/app.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/wizard_form.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/wizard_steps.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/ui/ripple.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/wizard_form.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/wizard_steps.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/ui/ripple.min.js')}}"></script>
     <!-- /theme JS files -->
 @endsection
 

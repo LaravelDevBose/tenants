@@ -4,17 +4,17 @@
 
 @section('assets')
     <!-- Theme JS files -->
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/selects/select2.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/core/libraries/jquery_ui/widgets.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/notifications/sweet_alert.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/libraries/jquery_ui/widgets.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/notifications/sweet_alert.min.js')}}"></script>
 
 
-    <script type="text/javascript" src="{{asset('public/assets/js/core/app.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/datatables_advanced.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/jqueryui_forms.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/datatables_advanced.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/jqueryui_forms.js')}}"></script>
 
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/ui/ripple.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/ui/ripple.min.js')}}"></script>
     <!-- /theme JS files -->
 @endsection
 
@@ -109,5 +109,5 @@
 
         </div>
     </div>
-    <script src="{{ asset('public/assets/ajax/expenses.js') }}"></script>
+    <script src="{{ asset('assets/ajax/expenses.js') }}"></script>
 @endsection

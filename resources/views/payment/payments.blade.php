@@ -4,18 +4,18 @@
 
 @section('assets')
     <!-- Theme JS files -->
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/tables/datatables/extensions/buttons.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/selects/select2.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/notifications/sweet_alert.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/datatables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/tables/datatables/extensions/buttons.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/notifications/sweet_alert.min.js')}}"></script>
 
-    <script type="text/javascript" src="{{asset('public/assets/js/core/app.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/datatables_sorting.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/datatables_extension_colvis.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/form_layouts.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/datatables_sorting.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/datatables_extension_colvis.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/form_layouts.js')}}"></script>
 
 
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/ui/ripple.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/ui/ripple.min.js')}}"></script>
     <!-- /theme JS files -->
 @endsection
 
@@ -153,6 +153,6 @@
         </div>
     </div>
     <!-- /info modal -->
-    <script src="{{ asset('public/assets/ajax/payment.js') }}"></script>
+    <script src="{{ asset('assets/ajax/payment.js') }}"></script>
 @endsection
 

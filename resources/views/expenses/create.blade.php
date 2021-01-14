@@ -4,17 +4,17 @@
 
 @section('assets')
     <!-- Theme JS files -->
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/selects/select2.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/core/libraries/jquery_ui/widgets.min.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/notifications/sweet_alert.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/selects/select2.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/forms/styling/uniform.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/libraries/jquery_ui/widgets.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/notifications/sweet_alert.min.js')}}"></script>
 
 
-    <script type="text/javascript" src="{{asset('public/assets/js/core/app.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/form_layouts.js')}}"></script>
-    <script type="text/javascript" src="{{asset('public/assets/js/pages/jqueryui_forms.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/core/app.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/form_layouts.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/pages/jqueryui_forms.js')}}"></script>
 
-    <script type="text/javascript" src="{{asset('public/assets/js/plugins/ui/ripple.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/plugins/ui/ripple.min.js')}}"></script>
     <!-- /theme JS files -->
 @endsection
 
@@ -172,7 +172,7 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('public/assets/ajax/expenses.js') }}"></script>
+    <script src="{{ asset('assets/ajax/expenses.js') }}"></script>
     <script>
         document.forms['expenses_insert'].elements['expenses_type'].value={{ old('expenses_type') }}
         document.forms['expenses_insert'].elements['payment_type'].value={{ old('payment_type') }}

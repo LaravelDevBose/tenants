@@ -43,9 +43,9 @@
                     <li class="{{ (strpos( Route::currentRouteName(), 'expenses' ) !== false)?'active':' ' }}"><a href="{{ route('expenses.index') }}"><i class="icon-cash3"></i> <span>Expense Details</span></a></li>
                     <li class="{{ (strpos( Route::currentRouteName(), 'report' ) !== false)?'active':' ' }}"><a href="{{ route('report.index') }}"><i class="icon-stats-decline"></i> <span>Reports</span></a></li>
 
-                    @if(Auth::user()->id == 1)
+                    {{-- @if(Auth::user()->id == 1)
                     <li class="{{ (strpos( Route::currentRouteName(), 'rating' ) !== false)?'active':' ' }}"><a href="{{ route('rating.view') }}"><i class="icon-stats-decline"></i> <span>User Rating</span></a></li>
-                    @endif
+                    @endif --}}
                     <!-- /page kits -->
 
                 </ul>
