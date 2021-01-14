@@ -23,7 +23,7 @@
         </ul>
 
         <div class="navbar-right">
-            <p class="navbar-text">Good <?php $time = date('H',strtotime('+6 hours')); echo ($time >= 05 && $time < 12 ) ?'Morning': ($time >= 12 && $time < 15) ? 'Noon' : ($time >= 15 && $time < 19) ?'After Noon' : ' Night'  ;?>, {{ Auth::User()->name }}!</p>
+            <p class="navbar-text"> {{ Auth::User()->name }}</p>
             <p class="navbar-text"><span class="label bg-success">Online</span></p>
 
             <ul class="nav navbar-nav">
