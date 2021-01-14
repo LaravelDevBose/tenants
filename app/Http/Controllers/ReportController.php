@@ -92,6 +92,14 @@ class ReportController extends Controller
         $main_data = array();
         $i=0;
         foreach ($data_collection as $singel_data) {
+            $roomType = 'One BedRoom';
+            if($singel_data->room_type == 1){
+                $roomType = 'Single Room';
+            }else if ($singel_data->room_type == 2){
+                $roomType = 'Double Room';
+            }else{
+                $roomType = 'One BedRoom';
+            }
             $data = array();
             $data['Id Number'] = $singel_data->id_number;
             $data['Full Name'] = $singel_data->full_name;
@@ -99,7 +107,7 @@ class ReportController extends Controller
             $data['Email Address'] = $singel_data->email_address;
             $data['Plot Name/Number'] = $singel_data->plot_name_number;
             $data['House Name/Number'] = $singel_data->house_name_number;
-            $data['Room Type'] = ($singel_data->room_type == 1) ? 'Single Room' : ($singel_data->room_type == 2) ? 'Double Room' : 'One BedRoom';
+            $data['Room Type'] = $roomType;
             $data['Rent Amount'] = '$' . number_format($singel_data->rent_amount);
             $data['Balance'] = '$' . number_format($singel_data->balance);
             $data['Gas Bill'] = '$' . number_format($singel_data->gas_bill);
