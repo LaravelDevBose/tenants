@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
             'name'=>'Admin',
             'username'=>'tenant_admin',
             'email'=>'admin@admin.com',
-            'password'=>Hash::make('123456')
+            'password'=>Hash::make('123456'),
+            'image'=> asset('assets/images/user.png')
         ]);
     }
 }
